@@ -31,11 +31,6 @@ int main() {
             cout << "Enter priority 1-5: ";
             cin >> priority;
 
-            while (!isValidPriority(priority)) {
-                cout << "Invalid priority. Enter 1-5: ";
-                cin >> priority;
-            }
-
             insertFront(head, createTask(description, priority));
             cout << "Task added." << endl;
 
