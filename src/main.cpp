@@ -26,7 +26,8 @@ int main() {
             int priority = 1;
 
             cout << "Enter description: ";
-            cin >> description;
+            cin.ignore(100, '\n');
+            getline(cin, description);
 
             cout << "Enter priority 1-5: ";
             cin >> priority;
@@ -46,7 +47,8 @@ int main() {
             string description;
 
             cout << "Enter description to complete: ";
-            cin >> description;
+            cin.ignore(100, '\n');
+            getline(cin, description);
 
             if (markTaskComplete(head, description)) {
                 cout << "Task marked complete." << endl;

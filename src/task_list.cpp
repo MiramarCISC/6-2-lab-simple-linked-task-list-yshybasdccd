@@ -143,10 +143,14 @@ void printTasks(const TaskNode* head) {
         return;
     }
 
+    cout << "Task List:" << endl;
+
     const TaskNode* current = head;
 
     while (current != nullptr) {
         printTask(current->data);
         current = current->next;
     }
+
+    cout << "Total tasks: " << countTasks(head) << endl;
 }
